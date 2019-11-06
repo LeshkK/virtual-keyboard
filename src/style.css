@@ -1,0 +1,72 @@
+body {
+    width: 90%;
+    margin: 0 auto;
+}
+
+textarea {
+    width: 70%;
+    height: 200px;
+    margin: 20px 15%;
+}
+
+#keyboard {
+    display: block;
+    text-align: center;
+    padding: 5px;
+}
+
+#keyboard::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.k-key, .enter, .space {
+    font-size: 1.5em;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 15%;
+    margin: 3px;
+    padding: 3px;
+    cursor: pointer;
+}
+
+.clearfix {
+    display: block;
+    width: 100%;
+    clear: both;
+}
+
+.enter, .backspace, .capslock, .shift, .alt, .ctrl, .tab, .del {
+    background: rgba(128, 128, 128, 0.445);
+}
+
+.active {
+    background: rgb(111, 248, 93);
+    animation: anim 0.5s infinite;
+}
+
+@keyframes anim {
+    from { border-radius: 50%; }
+      25% { border-radius: 40%; }
+      50% { border-radius: 30%; }
+      75% { border-radius: 20%; }
+      to { border-radius: 10%; }
+}
+
+.space {
+    width: 600px;
+    max-width: 50%;
+    border-radius: 20px;
+}
+
+.enter, .backspace, .capslock, .shift {
+    width: 115px;
+    border-radius: 20px;
+}
+
+.shift {
+    width: 146px;
+}
